@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+    <title th:text="${title}">ayq</title>
+
+    <link rel="stylesheet" href="http://blogz-demo.appspot.com/css/normalize.css" />
+    <link rel="stylesheet" href="http://blogz-demo.appspot.com/css/styles.css" />
+
+    <p>a place to read and write stories that let the reader make their own choices,
+        change the outcome, and ultimately forge their own destiny</p>
+
+</head>
+<body>
+
+<nav th:fragment="navigation">
+    <a href="/novel" style="font-family:sans-serif;font-size:20">home</a> |
+    <!-- <a href="/" style="font-family:sans-serif;font-size:20">Login</a> |
+    <a href="/menu" style="font-family:sans-serif;font-size:20">Signup</a> -->
+</nav>
+
+</body>
+</html>

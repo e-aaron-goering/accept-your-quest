@@ -1,0 +1,12 @@
+	WHO ARE YOU?
+	Enter Name, Sex, and Other Characteristics Here.
+	
+	//#fn# = First Name.
+	//#ln# = Last Name.
+	//#sx# = Sex - determines pronouns: #she# #her# #hers# 
+	//#ae# = Age - determines romantic involvement: too old or too young do not get romantic options
+	//#hc# = Hair Color - may or may not need
+	//#ec# = Eye Color - see above
+	//#st# = Skin tone?  do I even go there???
+
+*C3*

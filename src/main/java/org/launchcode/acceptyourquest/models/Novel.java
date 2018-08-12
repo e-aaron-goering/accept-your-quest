@@ -22,6 +22,8 @@ public class Novel {
     @OneToMany(mappedBy="novel")
     private List<Page> pages;
 
+    private boolean published = false;
+
     public String getTitle() {
         return title;
     }
@@ -42,4 +44,11 @@ public class Novel {
         this.pages.add(newPage);
     }
 
+    public boolean isPublished() {
+        return published;
+    }
+
+    public void setPublished(boolean published) {
+        this.published = published;
+    }
 }

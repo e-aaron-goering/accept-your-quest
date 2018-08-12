@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body class="container">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<div style="font-family:sans-serif;font-size:20">recently added:</div>
+
+<table class="table" style="width:810px" >
+    <tr>
+        <td align="center" valign="center">
+            <div style="width:230px;height:346px">
+                <img src="https://pixy.org/images/placeholder.png" width="230px" height="346px" alt="Novel">
+            </div>
+            <br/>
+            <a href="/novel/title-page/1" style="font-family:sans-serif;font-size:20" th:text="${recent.get(0)}"></a>
+        </td>
+        <td align="center" valign="center">
+            <div style="width:230px;height:346px">
+                <img src="https://pixy.org/images/placeholder.png" width="230px" height="346px" alt="Novel">
+            </div>
+            <br/>
+            <a href="/novel/title-page/2" style="font-family:sans-serif;font-size:20" th:text="${recent.get(1)}"></a>
+        </td>
+        <td align="center" valign="center">
+            <div style="width:230px;height:346px">
+                <img src="https://pixy.org/images/placeholder.png" width="230px" height="346px" alt="Novel">
+            </div>
+            <br/>
+            <a href="/novel/title-page/3" style="font-family:sans-serif;font-size:20" th:text="${recent.get(2)}"></a>
+        </td>
+    </tr>
+</table>
+
+<table class="table" style="width:810px" >
+    <tr>
+        <td align="center" valign="center">
+            <div style="width:230px;height:346px">
+                <img src="https://pixy.org/images/placeholder.png" width="230px" height="346px" alt="Novel">
+            </div>
+            <br/>
+            <a href="/novel/title-page/4" style="font-family:sans-serif;font-size:20" th:text="${recent.get(3)}"></a>
+        </td>
+    </tr>
+
+</table>

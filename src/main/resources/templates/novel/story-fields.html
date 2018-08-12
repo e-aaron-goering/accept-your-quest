@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body class="container">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<h1 align="center" th:text="${novel.getNovelTitle()}"></h1>
+
+<h3 align="center" style="font-family:sans-serif" th:unless="${storyFields} and ${storyFields.size()}">there are no story fields to fill out for this tale</h3>
+<a style="font-family:sans-serif;font-size:20" align="center" valign="center" th:unless="${storyFields} and ${storyFields.size()}" href="@{/novel/{novelId}/1(novelId = ${novelId})}">begin reading</a>
+
+<form method="post" th:if="${storyFields} and ${storyFields.size()}" th:action="@{/novel/{novelId}/1(novelId = ${novelId})}">
+
+    <p th:if="${storyFields.get(0).equals('fnlnpn')}">
+        <label for="firstName">first name(for your fictional character)</label>
+        <input type="text" name="firstName" id="firstName" />
+    </p>
+    <p th:if="${storyFields.get(0).equals('fnlnpn')}">
+        <label for="lastName">last name</label>
+        <input type="text" name="lastName" id="lastName" />
+    </p>
+
+    <p th:if="${storyFields.get(0).equals('fnlnpn')}">
+        <div style="font-family:sans-serif;font-size:20px;display:block" >pronouns</div>
+        <select name="Pronoun">
+            <option th:each="pronoun : ${pronouns}" th:value="${pronoun}"
+                    th:text="${pronoun}"></option>
+        </select>
+    </p>
+
+    <p th:each="storyField : ${storyFields}">
+        <label th:unless="${storyField.equals('fnlnpn')}" for="storyField" th:text="${storyField}"></label>
+        <input th:unless="${storyField.equals('fnlnpn')}" type="text" name="storyField" id="storyField" />
+    </p>
+
+    <input type="submit" value="Submit" />
+</form>
+
+</body>
+</html>
