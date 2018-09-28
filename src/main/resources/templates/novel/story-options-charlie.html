@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body class="container">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<h1 align="center" th:text="${novel.getTitle()}"></h1>
+
+<form method="post" th:action="'/novel/charlie/' + ${novelId} + '/' + ${novel.getPage(0).getId()}">
+
+        <p th:each="option : ${storyOptions}">
+            <label for="storyOptions" th:text="${option.getStoryOption()}"></label>
+            <input type="text" name="storyOptions" id="storyOptions" />
+        </p>
+
+    <input type="submit" value="Submit" >
+</form>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body class="container">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<h1 align="center" th:text="${novel.getTitle()}"></h1>
+
+<h3 align="center" style="font-family:sans-serif" >there are no story options to fill out for this tale</h3>
+
+<form method="post" th:action="'/novel/alpha/' + ${novelId} + '/' + ${novel.getPage(0).getId()}">
+    <input type="submit" value="Begin Reading" >
+</form>
+
+</body>
+</html>

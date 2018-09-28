@@ -17,15 +17,18 @@ public class Page {
     @Size(min=3, max=80)
     private String pageTitle;
 
-    @Size(max=2500)
+    @Size(max=5000)
     private String pageText;
 
-    @OneToMany(mappedBy ="page", cascade=CascadeType.ALL)
+    @OneToMany
+    @JoinColumn(name = "page_id")
     private List<Choice> choices = new ArrayList<>();
 
     @ManyToOne
-    @JoinColumn(name = "novel_id")
     private Novel novel;
+
+    public Page() {
+    }
 
     public Page(String choiceDescription) {
         this.pageTitle = choiceDescription;
@@ -43,7 +46,11 @@ public class Page {
 
     public void deleteChoice(Choice choice){
         this.choices.remove(choice);
-        //delete the page created by the choice
+        //delete the page created by the choice?
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getPageTitle() {

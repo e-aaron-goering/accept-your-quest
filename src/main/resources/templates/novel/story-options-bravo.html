@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body class="container">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<h1 align="center" th:text="${novel.getTitle()}"></h1>
+
+<form method="post" th:action="'/novel/bravo/' + ${novelId} + '/' + ${novel.getPage(0).getId()}">
+
+    <p>
+        <label for="firstName">first name(for your fictional character)</label>
+        <input type="text" name="firstName" id="firstName" />
+    </p>
+    <p>
+        <label for="lastName">last name</label>
+        <input type="text" name="lastName" id="lastName" />
+    </p>
+
+    <p>
+    <div style="font-family:sans-serif;font-size:20px;display:block" >pronouns</div>
+    <select name="pronoun">
+        <option th:each="pronoun : ${pronouns}" th:value="${pronoun}"
+                th:text="${pronoun}"></option>
+    </select>
+    </p>
+
+    <input type="submit" value="Submit" >
+</form>
+
+</body>
+</html>

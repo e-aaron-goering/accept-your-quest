@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body class="container">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<h2 th:text="${subTitle}">Default Title</h2>
+
+<pre th:text="${pageText}"></pre>
+
+<div th:each="choice : ${choices}">
+    <form method="post" th:action="'/novel/delta/' + ${novelId} + '/' + ${choice.getPagePointer()}">
+        <input type="hidden" name="firstName" th:value="${firstName}" >
+        <input type="hidden" name="lastName" th:value="${lastName}" >
+        <input type="hidden" name="pronoun" th:value="${pronoun}" >
+        <input th:each="option : ${storyOptions}" type="hidden" name="storyOptions" th:value="${option}" >
+        <input type="submit" th:value="${choice.getChoiceDescription()}" >
+    </form>
+</div>
+
+</body>
+</html>

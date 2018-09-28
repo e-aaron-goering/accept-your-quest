@@ -1,12 +1,45 @@
-	WHO ARE YOU?
-	Enter Name, Sex, and Other Characteristics Here.
-	
-	//#fn# = First Name.
-	//#ln# = Last Name.
-	//#sx# = Sex - determines pronouns: #she# #her# #hers# 
-	//#ae# = Age - determines romantic involvement: too old or too young do not get romantic options
-	//#hc# = Hair Color - may or may not need
-	//#ec# = Eye Color - see above
-	//#st# = Skin tone?  do I even go there???
+	"Oh sorry," you apologize, "I'm #fn# #ln#."
 
-*C3*
+	"Pleased to meet you, #fn# #ln#," Maelstrom replies, "Now on to the state 
+of this realm.  Things have become most dire."
+
+	"Two centuries ago," he continues, "the Golem Wars ended.  There was much 
+rejoicing as the Wretched Wizard Kathemir had been killed in battle by my 
+champion, which ended much suffering and brought an era of peace.  My champion 
+also died defending the people he loved and became an inspiration to all.  
+However, there was a lingering shadow.  Someone has been perverting magic, we do 
+not know who, although we believe the first was an acolyte of Kathemir, a student 
+who then took on students of their own.  They have thwarted all of the Dragon's 
+attempts at identification, which is the most puzzling.  All magic in this realm 
+flows from Dragons, and none can use magic in ways that are forbidden, as the 
+Dragon whose magic is being used can detect it straight away and put a stop to 
+it."
+
+	"If you can't detect when they use magic, or who they are, how do you know
+anyone is perverting your magic?" you wonder aloud.
+
+	"Indeed, we have heard mostly rumors, but there have been unnatural 
+plagues that have wiped out entire villages, creatures who have been modified, 
+grown in size and strength and released upon unsuspecting populaces to terrorize 
+them.  The tales have been few and far between until the last year.  We now have 
+lost an entire city, perhaps to plague, but none of the Dragon's can detec the 
+people or creatures who once lived there.  There are also rumors of suspicious 
+actors inquiring about the Old Relics.  Powerful weapons and artifacts that were 
+once imbued with immensely powerful magic, but hidden away so as to never again 
+cause the destruction or to threaten our way of life as they did eons ago.  You 
+alone have ben chosen to aid our realm, as you possess a singular ability that can
+not be found anywhere within our realm.  That and your language also appears to 
+have evolved along similars lines as the common language spoken in this realm as 
+well," the Dragon once again giving a throaty, thundering chuckle.
+
+	"I think you must be mistaken, I don't have any special abilities," you 
+insist.
+
+	"#fn# #ln#, you do indeed have a great ability, I can see it within you, 
+as surely as I see these stone walls," Maelstrom replies.
+
+	"What can I do with this ability?" you ask.
+
+	"I cannot tell you.  Undetectable magic could be in use at this moment to 
+listen in to our conversation.  It is risky enough for me to tell you as much as I
+have."

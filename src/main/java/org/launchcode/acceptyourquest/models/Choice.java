@@ -3,6 +3,7 @@ package org.launchcode.acceptyourquest.models;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
 
 @Entity
 public class Choice {
@@ -16,8 +17,21 @@ public class Choice {
     private String choiceDescription;
 
     @ManyToOne
-    @JoinColumn(name = "page_id")
-    private Page page;
+    private Page currentPage;
+
+    private int pagePointer;
+
+    public Choice() {
+    }
+
+    public Choice(@NotNull @Size(min = 3, max = 80) String choiceDescription) {
+        this.choiceDescription = choiceDescription;
+    }
+
+    public Choice(@NotNull @Size(min = 3, max = 80) String choiceDescription, Page page) {
+        this.choiceDescription = choiceDescription;
+        this.currentPage = page;
+    }
 
     public String getChoiceDescription() {
         return choiceDescription;
@@ -27,7 +41,19 @@ public class Choice {
         this.choiceDescription = choiceDescription;
     }
 
-    public Page getPage() {
-        return page;
+    public void setCurrentPage(Page page) {
+        this.currentPage = page;
+    }
+
+    public Page getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public int getPagePointer() {
+        return this.pagePointer;
+    }
+
+    public void setPagePointer(int pagePointer) {
+        this.pagePointer = pagePointer;
     }
 }

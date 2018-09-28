@@ -9,13 +9,13 @@
 <nav th:replace="fragments :: navigation"></nav>
 
 <h2 th:text="${subTitle}">Default Title</h2>
-<h3 th:text="'page ' + ${pageId}"></h3>
 
-<p th:text="${pageTxt}"></p>
+<pre th:text="${pageText}"></pre>
 
 <div th:each="choice : ${choices}">
-<a th:href="@{/novel/{novelId}/{newPageId}(novelId = ${novelId}, newPageId=${choice.getPageId()})}" th:text="${choice.getChoiceDescription()}"></a>
+    <form method="post" th:action="'/novel/alpha/' + ${novelId} + '/' + ${choice.getPagePointer()}">
+        <input type="submit" th:value="${choice.getChoiceDescription()}" >
+    </form>
 </div>
 
 </body>
-</html>

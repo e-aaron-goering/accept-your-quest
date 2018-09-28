@@ -11,14 +11,14 @@
 <table class="table" style="width:810px" >
     <tr>
         <td align="center" valign="center">
-            <h2 style="font-family:sans-serif" th:text="${novel}"></h2>
-            <h4 style="font-family:sans-serif" th:text="${subTitle}"></h4>
+            <h2 style="font-family:sans-serif" th:text="${novel.getTitle()}"></h2>
+            <h4 style="font-family:sans-serif" th:text="${novel.getSubtitle()}"></h4>
             <br/>
             <div style="width:345px;height:519px">
                 <img src="https://pixy.org/images/placeholder.png" width="345px" height="519px" alt="Title Page">
             </div>
             <br/>
-            <a th:href="'/novel/story-fields/' + ${novelId}" style="font-family:sans-serif;font-size:20" >select story fields -></a>
+            <a th:href="'/novel/story-options/' + ${novel.getId()}" style="font-family:sans-serif;font-size:20" >select story fields -></a>
         </td>
     </tr>
 </table>
